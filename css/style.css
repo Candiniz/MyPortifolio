@@ -55,9 +55,10 @@ body {
     position: absolute;
     z-index: 50;
     font-family: 'Space Mono', monospace;
-    color: white;
+    color: rgb(177, 177, 177);
     top: -20px;
     font-size: 20px;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.744));
 }
 
 #frontend {
@@ -87,7 +88,7 @@ body {
     height: 90vh;
     bottom: 0;
     z-index: 0;
-    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.467));
 }
 
 #itsme1 {
@@ -301,11 +302,32 @@ body {
     opacity: 0.5;
 }
 
-.socialmedias-svg:hover {
+#instagramsvg:hover {
     opacity: 1;
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
+    fill: #fd83ff;
     transition: 0.4s;
-    fill: #e8ff97;
+}
+
+#linkedinsvg:hover {
+  opacity: 1;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
+  fill: #86b9ff;
+  transition: 0.4s;
+}
+
+#whatsappsvg:hover {
+  opacity: 1;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
+  fill: #e8ff97;
+  transition: 0.4s;
+}
+
+#ytsvg:hover {
+  opacity: 1;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
+  fill: #ff5b5b;
+  transition: 0.4s;
 }
 
 .navbar-items li:hover {
@@ -318,12 +340,12 @@ body {
 main {
   z-index: 400;
   position: absolute;
-  padding-top: 100px;
-  width: 100vw;
-  background-color: #1e1e1e;
-  color: white;
-  z-index: 400;
-  text-align: center;
+   padding-top: 100px;
+    width: 100vw;
+    background-color: #1e1e1e;
+    color: white;
+    z-index: 400;
+    text-align: center;
 }
 
 .maincontent {
