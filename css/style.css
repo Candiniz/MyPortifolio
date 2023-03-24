@@ -26,6 +26,13 @@ body {
     align-items: center;
 }
 
+#change-background-color {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 500;
+}
+
 #backmountains {
     position: absolute;
     width: 100%;
@@ -46,14 +53,9 @@ body {
 #maintitle {
     position: absolute;
     width: 80vw;
-    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    bottom: 90px;
-    margin-bottom: 0px;
-    border: solid rgba(255, 255, 255, 0.029);
     height: 80vh;
     bottom: 90px;
     margin-bottom: 0px;
@@ -381,28 +383,32 @@ body {
     opacity: 0.5;
 }
 
-#instagramsvg:hover {
-    opacity: 1;
-    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
-    fill: #fd83ff;
-    transition: 0.4s;
+#instagramsvg path, #linkedinsvg path, #whatsappsvg path, #ytsvg path {
+  fill: #dbdbdb;
+  transition: 0.4s;
 }
 
-#linkedinsvg:hover {
+#instagramsvg:hover path {
+  fill: #fd83ff;
+  opacity: 1;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
+}
+
+#linkedinsvg:hover path {
   opacity: 1;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
   fill: #86b9ff;
   transition: 0.4s;
 }
 
-#whatsappsvg:hover {
+#whatsappsvg:hover path {
   opacity: 1;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
   fill: #e8ff97;
   transition: 0.4s;
 }
 
-#ytsvg:hover {
+#ytsvg:hover path {
   opacity: 1;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
   fill: #ff5b5b;
@@ -498,16 +504,7 @@ body {
   } 
 }
 
-main {
-  z-index: 400;
-  position: absolute;
-   padding-top: 100px;
-    width: 100vw;
-    background-color: #000000;
-    color: white;
-    z-index: 400;
-    text-align: center;
-}
+
 
 .mobile-menu {
   cursor: pointer;
@@ -522,6 +519,17 @@ main {
   background: #fff;
   margin: 8px;
 
+}
+
+main {
+  z-index: 400;
+  position: absolute;
+   padding-top: 100px;
+    width: 100vw;
+    background-color: #000000;
+    color: white;
+    z-index: 400;
+    text-align: center;
 }
 
 @media screen and (max-width: 700px) {
@@ -592,11 +600,14 @@ main {
 }
 
 .maincontent-title {
-  font-family: 'Tilt Warp', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 90px;
+  font-weight: bolder;
   padding-bottom: 20px;
   border-top: solid 2px #e8ff978c;
+  width: 50%;
   color: #e8ff97;
+  margin: auto;
 }
 
 .ptext {
@@ -626,11 +637,10 @@ main {
   font-family: 'Poppins', sans-serif;
   font-size: 19px;
   background: black;
-  margin-left: 20px;
-  margin-right: 20px;
   text-align: justify;
   text-indent: 40px;
-  filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.543));
+  width: 100%;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.543));
   z-index: 100;
 }
 
@@ -645,7 +655,7 @@ main {
 
 @media screen and (max-width: 700px) {
   .pimg2, .pimg3{
-    background-position: -600px
+    background-position: 70%;
   }
 }
 .pimg1 {
@@ -689,12 +699,65 @@ main {
 
 #aboutme-final {
   text-align: center;
-  color: #000;
+  color: #aeaeae;
   font-weight: bold;
-  background: #787878;
+  background: #222222;
   padding: 10px;
   font-size: 20px;
   margin-bottom: 50px;
 }
 
+#academic-formation {
+  font-size: 3vw;
+  font-family: 'Tilt Warp', cursive;
+  margin-bottom: 50px;
+}
 
+.academic {
+  background: linear-gradient(#000, #2a2a2a);
+  padding-bottom: 50px;
+}
+.academic, .academic aside {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  text-align: justify;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 50px;
+  flex-wrap: nowrap;
+}
+.academic div p {
+  width: 500px;
+  padding: 20px;
+}
+.ztm, .pucrs {
+  width: 200px;
+}
+
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px 300px;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  padding: 50px;
+  height: 400px;
+  width: 100%;
+}
+
+.project1 {
+  background-color: #b9b9b9;
+  grid-row: 1;
+  grid-column: 1;
+}
+.project2 {
+  background-color: #b9b9b9;
+  grid-row: 1;
+  grid-column: 2;
+}
+.project3 {
+  background-color: #b9b9b9;
+  grid-row: 1;
+  grid-column: 3;
+}

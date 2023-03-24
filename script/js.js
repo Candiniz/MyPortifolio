@@ -170,7 +170,7 @@ function updateParallaxStyles() {
 }
 
 // Adiciona o event listener com o throttling
-window.addEventListener('scroll', throttleScroll(updateParallaxStyles, 100));
+window.addEventListener('scroll', throttleScroll(updateParallaxStyles, 60));
 
 
 class MobileNavbar {
@@ -215,3 +215,22 @@ const observer = new IntersectionObserver   ((entries) => {
 
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+document.getElementById('change-background-color').addEventListener('click', changeBackgroundColor);
+
+
+
+function changeBackgroundColor() {
+  document.body.style.background = 'linear-gradient(white, lightgray)';
+  document.querySelector('.academic').style.background = 'linear-gradient(white, lightgray)'
+  document.querySelector('.academic').style.color = 'black'
+  document.querySelector('.main').style.background = 'white';
+  let divs = document.querySelectorAll('.textbox-dark'); // seleciona todas as divs
+
+  for(let i = 0; i < divs.length; i++) { // loop para cada div
+    divs[i].style.backgroundColor = 'white'; // altera a cor de fundo
+    divs[i].style.color = 'black'; // altera a cor do texto
+  }
+
+}
