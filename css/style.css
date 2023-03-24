@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 
 * {
     margin: 0;
@@ -12,8 +14,6 @@ body {
     background: linear-gradient(#000,#353535);
     overflow-x: hidden;
 }
-
-
 
 .header-me {
     position: relative;
@@ -46,9 +46,14 @@ body {
 #maintitle {
     position: absolute;
     width: 80vw;
+    width: 80vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 80vh;
+    bottom: 90px;
+    margin-bottom: 0px;
+    border: solid rgba(255, 255, 255, 0.029);
     height: 80vh;
     bottom: 90px;
     margin-bottom: 0px;
@@ -411,12 +416,94 @@ body {
     transition: 0.4s;
 }
 
+
+
+.mobile-menu {
+  cursor: pointer;
+  display: none;
+  right: 10px;
+  bottom: 16px;
+  position: absolute;
+}
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    font-size: 4vw;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .navbar-items {
+    position: absolute;
+    border-radius: 50px 0px 0px 0px ;
+    bottom: 70px;
+    right: 0;
+    width: 170px;
+    height: 47vh;    background-color: #000000c6;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-text-stroke: #00000000;
+    color: rgba(255, 255, 255, 0.487);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    padding: 5vw;
+    font-size: 20px;
+  }
+  .navbar-items.active {
+    transform: translateX(0);
+  }
+  .navbar-links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-links li {
+    margin-bottom: 10px;
+  }
+  .socialmedia-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-top: solid rgba(255, 255, 255, 0.4);
+    border-bottom: solid rgba(255, 255, 255, 0.4);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .socialmedias-svg:nth-child(1) {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  
+  .socialmedias-svg:nth-child(2) {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+  
+  .socialmedias-svg:nth-child(3) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  
+  .socialmedias-svg:nth-child(4) {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  } 
+}
+
 main {
   z-index: 400;
-  position: relative;
+  position: absolute;
    padding-top: 100px;
     width: 100vw;
-    background-color: #1e1e1e;
+    background-color: #000000;
     color: white;
     z-index: 400;
     text-align: center;
@@ -504,8 +591,111 @@ main {
   
 }
 
-.maincontent {
-   
+.maincontent-title {
+  font-family: 'Tilt Warp', cursive;
+  font-size: 90px;
+  padding-bottom: 20px;
+  border-top: solid 2px #e8ff978c;
+  color: #e8ff97;
+}
+
+.ptext {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  width: 300px;
+  height: 40px;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #787878;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  letter-spacing: 4px;
+}
+
+.textbox-dark p {
+  max-width: 1300px;
+  margin: auto;
+}
+.textbox-dark {
+  padding: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 19px;
+  background: black;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+  text-indent: 40px;
+  filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.543));
+  z-index: 100;
+}
+
+
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 700px) {
+  .pimg2, .pimg3{
+    background-position: -600px
+  }
+}
+.pimg1 {
+  background-image: url('../images/me-w-guitar.jpg');
+  min-height: 400px;
+}
+
+.pimg2 {
+  background-image: url('../images/me-leroy.jpg');
+  min-height: 400px;
+}
+
+.pimg3 {
+  background-image: url('../images/me-in-park.jpg');
+  min-height: 400px;
+}
+
+.tech-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+#techlogos {
+  width: 500px;
+  position: relative;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+#aboutme-final {
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  background: #787878;
+  padding: 10px;
+  font-size: 20px;
+  margin-bottom: 50px;
 }
 
 

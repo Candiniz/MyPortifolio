@@ -122,60 +122,56 @@ setInterval(function() {
     }, 200);
 }, 5000);
 
+// Função que faz o throttling do evento de scroll
+function throttleScroll(callback, delay) {
+  let lastTime = 0;
+  return function() {
+    const now = new Date().getTime();
+    if (now - lastTime >= delay) {
+      callback();
+      lastTime = now;
+    }
+  }
+}
 
 const parallaxANDERSON = document.querySelector('#ANDERSON');
+const parallaxDINIZ1 = document.querySelector('.glitch-bloc');
+const parallaxMOUNTAINS = document.querySelector('#backmountains');
+const parallaxME1 = document.querySelector('#itsme1');
+const parallaxME2 = document.querySelector('#itsme2');
+const parallaxFE = document.querySelector('#frontend');
 
-window.addEventListener('scroll', function() {
+// Função para atualizar os estilos do parallax
+function updateParallaxStyles() {
   let offset = window.pageYOffset;
   parallaxANDERSON.style.transform = 'translateX(' + offset * 0.2 + 'px)';
   let blurValue = offset * 0.03;
   parallaxANDERSON.style.filter = 'blur(' + blurValue + 'px)';
-});
 
-const parallaxDINIZ1 = document.querySelector('.glitch-bloc');
-
-window.addEventListener('scroll', function() {
-  let offset = window.pageYOffset;
+  offset = window.pageYOffset;
   parallaxDINIZ1.style.transform = 'translateX(' + offset * -0.2 + 'px)';
-  let blurValue = offset * 0.08;
+  blurValue = offset * 0.08;
   parallaxDINIZ1.style.filter = 'blur(' + blurValue + 'px)';
-});
 
-const parallaxMOUNTAINS = document.querySelector('#backmountains');
-
-window.addEventListener('scroll', function() {
-  let offset = window.pageYOffset;
+  offset = window.pageYOffset;
   parallaxMOUNTAINS.style.transform = 'translateY(' + offset * 0.4 + 'px)';
-  let blurValue = offset * 0.01;
-  parallaxMOUNTAINS.style.filter = 'blur(' + blurValue + 'px)';
-});
 
-const parallaxME1 = document.querySelector('#itsme1');
-
-window.addEventListener('scroll', function() {
-  let offset = window.pageYOffset;
+  offset = window.pageYOffset;
   parallaxME1.style.transform = 'translateY(' + offset * 0.15 + 'px)';
-  let blurValue = offset * 0.01;
-  parallaxME1.style.filter = 'blur(' + blurValue + 'px)';
-});
 
-const parallaxME2 = document.querySelector('#itsme2');
 
-window.addEventListener('scroll', function() {
-  let offset = window.pageYOffset;
+  offset = window.pageYOffset;
   parallaxME2.style.transform = 'translateY(' + offset * 0.1 + 'px)';
-  let blurValue = offset * 0.01;
-  parallaxME2.style.filter = 'blur(' + blurValue + 'px)';
-});
 
-const parallaxFE = document.querySelector('#frontend');
-
-window.addEventListener('scroll', function() {
-  let offset = window.pageYOffset;
+  offset = window.pageYOffset;
   parallaxFE.style.transform = 'translateY(' + offset * 0.4 + 'px)';
-  let blurValue = offset * 0.02;
+  blurValue = offset * 0.02;
   parallaxFE.style.filter = 'blur(' + blurValue + 'px)';
-});
+}
+
+// Adiciona o event listener com o throttling
+window.addEventListener('scroll', throttleScroll(updateParallaxStyles, 100));
+
 
 class MobileNavbar {
   constructor(mobileMenu, navList, navLinks) {
@@ -206,3 +202,16 @@ const mobileNavbar = new MobileNavbar(
   ".navbar-items li",
 );
 mobileNavbar.init();
+
+const observer = new IntersectionObserver   ((entries) => {
+  entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+      } else {
+          entry.target.classList.remove('show');
+      }
+  });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
