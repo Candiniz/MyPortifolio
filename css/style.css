@@ -1097,7 +1097,7 @@ main {
     height: 100px;
   }
 
-  .aboutMe-big, .projects-big{
+  #aboutMe-big, #projects-big{
     display: none;
   }
 }
