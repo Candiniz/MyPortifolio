@@ -804,7 +804,7 @@ main {
   z-index: 100;
   text-align: justify;
   font-family: 'Poppins', sans-serif;
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .modalztm {
@@ -825,7 +825,7 @@ main {
   z-index: 100;
   text-align: justify;
   font-family: 'Poppins', sans-serif;
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .modalpuc.show, .modalztm.show {
@@ -1097,5 +1097,7 @@ main {
     height: 100px;
   }
 
-  
+  .aboutMe-big, .projects-big{
+    display: none;
+  }
 }
