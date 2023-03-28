@@ -16,6 +16,11 @@
 //   pimg3.style.backgroundPosition = `0 ${scrolled3 * 0.4}px`;
 // });
 
+window.onload = function() {
+  var downloadCv = document.getElementById('cv');
+  downloadCv.style.opacity = '0.6';
+  downloadCv.style.transform = 'scale(1)';
+}
 
 var helloworld = document.getElementById('helloworld');
 var textH = helloworld.innerHTML;
