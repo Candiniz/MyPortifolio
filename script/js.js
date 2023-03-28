@@ -344,3 +344,84 @@ closeModalButton2.addEventListener('click', function() {
 
 
 
+
+const container3 = document.querySelector('#pj-bt1');
+const modal3 = document.querySelector('#modal-pj1');
+const closeModalButton3 = document.querySelector('.close-modalPJ1');
+
+container3.addEventListener('click', function() {
+  whiteback.style.opacity = 1;
+  modal3.style.display = 'flex';
+  modal3.style.opacity = 0;
+  modal3.style.transform = 'translateY(-50%) translateX(-100%)';
+  modal3.classList.add('show');
+  setTimeout(function() {
+    modal3.style.opacity = 1;
+    modal3.style.transform = 'translateY(-50%) translateX(-50%)';
+  }, 100);
+});
+
+closeModalButton3.addEventListener('click', function() {
+  setTimeout(function() {
+    modal3.classList.remove('show');
+  }, 500);
+
+  whiteback.style.opacity = 0;
+  modal3.style.opacity = 0;
+  modal3.style.transform = 'translateY(-50%) translateX(-100%)';
+});
+
+
+const container4 = document.querySelector('#pj-bt2');
+const modal4 = document.querySelector('#modal-pj2');
+const closeModalButton4 = document.querySelector('.close-modalPJ2');
+
+container4.addEventListener('click', function() {
+  whiteback.style.opacity = 1;
+  modal4.style.display = 'flex';
+  modal4.style.opacity = 0;
+  modal4.style.transform = 'translateY(-50%) translateX(-100%)';
+  modal4.classList.add('show');
+  setTimeout(function() {
+    modal4.style.opacity = 1;
+    modal4.style.transform = 'translateY(-50%) translateX(-50%)';
+  }, 100);
+});
+
+closeModalButton4.addEventListener('click', function() {
+  whiteback.style.opacity = 0;
+  modal4.style.opacity = 0;
+  modal4.style.transform = 'translateY(-50%) translateX(-100%)';
+
+  setTimeout(function() {
+    modal4.classList.remove('show');
+  }, 500);
+});
+
+
+const container5 = document.querySelector('#pj-bt3');
+const modal5 = document.querySelector('#modal-pj3');
+const closeModalButton5 = document.querySelector('.close-modalPJ3');
+
+
+container5.addEventListener('click', function() {
+  whiteback.style.opacity = 1;
+  modal5.style.display = 'flex';
+  modal5.style.opacity = 0;
+  modal5.style.transform = 'translateY(-50%) translateX(-100%)';
+  modal5.classList.add('show');
+  setTimeout(function() {
+    modal5.style.opacity = 1;
+    modal5.style.transform = 'translateY(-50%) translateX(-50%)';
+  }, 100);
+});
+
+closeModalButton5.addEventListener('click', function() {
+  whiteback.style.opacity = 0;
+  modal5.style.opacity = 0;
+  modal5.style.transform = 'translateY(-50%) translateX(-100%)';
+
+  setTimeout(function() {
+    modal5.classList.remove('show');
+  }, 500);
+});
