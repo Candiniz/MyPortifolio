@@ -194,7 +194,7 @@ function updateParallaxStyles() {
 }
 
 // Adiciona o event listener com o throttling
-window.addEventListener('scroll', throttleScroll(updateParallaxStyles, 100));
+window.addEventListener('scroll', throttleScroll(updateParallaxStyles, 0));
 
 
 class MobileNavbar {
