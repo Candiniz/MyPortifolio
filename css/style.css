@@ -1100,4 +1100,15 @@ main {
   #aboutMe-big, #projects-big{
     display: none;
   }
+
+  #academic-formation-big {
+    animation: none;
+    font-size: 8vw;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
