@@ -387,7 +387,7 @@ body {
 }
 
 .socialmedias-svg {
-    width: 50px;
+    width: 45px;
     margin: 0px 10px;
     opacity: 0.5;
 }
@@ -417,6 +417,13 @@ body {
   opacity: 1;
   filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
   fill: #ff5b5b;
+  transition: 0.4s;
+}
+
+#ghsvg:hover {
+  opacity: 1;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.267));
+  fill: #a47fd4;
   transition: 0.4s;
 }
 
@@ -572,7 +579,7 @@ main {
   .socialmedia-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     border-top: solid rgba(255, 255, 255, 0.4);
     border-bottom: solid rgba(255, 255, 255, 0.4);
     padding-top: 10px;
@@ -697,7 +704,7 @@ main {
   text-indent: 0;
 }
 #techlogos {
-  width: 500px;
+  width: 70vw;
   position: relative;
 }
 
@@ -1084,16 +1091,8 @@ main {
     margin: 20px 0 20px 0;
   }
 
-  .tech-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-  }
-
   #techlogos {
-    width: 300px;
-    position: relative;
+    width: 95w;
   }
 
   #aboutme-final {
