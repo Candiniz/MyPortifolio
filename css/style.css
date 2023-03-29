@@ -386,6 +386,7 @@ body {
     justify-content: space-around;
     align-items: center;
     list-style: none;
+
 }
 
 .navbar-links {
@@ -478,9 +479,7 @@ body {
 
 }
 
-.navbar-items-container {
-  display: none;
-}
+
 
 
 @media screen and (max-width: 700px) {
