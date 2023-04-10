@@ -294,6 +294,7 @@ document.addEventListener('mousemove', function(event) {
 
 
 
+
 const container1 = document.querySelector('.univ-containerPUC');
 const modal1 = document.querySelector('.modalpuc');
 const closeModalButton1 = document.querySelector('.close-modalpuc');
@@ -320,6 +321,33 @@ closeModalButton1.addEventListener('click', function() {
     modal1.classList.remove('show');
   }, 500);
 });
+
+const container0 = document.querySelector('.univ-containerUAM');
+const modal0 = document.querySelector('.modaluam');
+const closeModalButton0 = document.querySelector('.close-modaluam');
+
+container0.addEventListener('click', function() {
+  whiteback.style.opacity = 1;
+  modal0.style.display = 'flex';
+  modal0.style.opacity = 0;
+  modal0.style.transform = 'translateY(-50%) translateX(-100%)';
+  modal0.classList.add('show');
+  setTimeout(function() {
+    modal0.style.opacity = 1;
+    modal0.style.transform = 'translateY(-50%) translateX(-50%)';
+  }, 100);
+});
+
+closeModalButton0.addEventListener('click', function() {
+  whiteback.style.opacity = 0;
+  modal0.style.opacity = 0;
+  modal0.style.transform = 'translateY(-50%) translateX(-100%)';
+
+  setTimeout(function() {
+    modal0.classList.remove('show');
+  }, 500);
+});
+
 
 const container2 = document.querySelector('.univ-containerZTM');
 const modal2 = document.querySelector('.modalztm');
